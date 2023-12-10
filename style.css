@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+outline: 0.1rem solid orangered
+}
+
+body {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(270deg, rgb(250, 81, 24) 0%, rgb(255, 215, 15) 100%);
+  
+}
+
+input {
+ position: fixed;
+ bottom: 50%;
+ right: 33%;
+ padding: 1rem;
+ border: 0.1rem solid rgba(255,255,255,0);
+ border-bottom: 0.1rem solid rgba(250,81,24,0.5);
+ z-index: 1;
+}
+
+.search-container {
+ position: fixed;
+  
+}
+.search-container input,
+.search-container .suggestions {
+  position: fixed;
+  bottom: 50%;
+  right: 33%;
+  /* background-color: rgba(255,255,255,0.25); */
+  width: 33vw;
+} 
+.search-container input {
+  background-color: rgba(255,255,255,0.25);
+  /* width: 33vw; */
+}
+/* .search-container .suggestions {
+position: flex;
+} */
+
+ul {
+position: fixed;
+width: 33vw;
+margin: 0;
+padding: 0;
+background-color: rgba(255,255,255,0.25);
+/* overflow-y: scroll; */
+}
+ul.has-suggestions {
+font-weight: bold;
+}
+ul li {
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 100%;
+  list-style-type: none;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  /* justify-content: center; */
+  /* padding-left: 1rem;
+  padding-bottom: 1rem; */
+}
+ul li:hover {
+ background-color: darkorange;
+ cursor: pointer;
+}
